@@ -7,9 +7,9 @@
 using namespace::std;
 int game();
 bool loop = true;
-int level = 100;
+int level = 1;
 int output[1000];
-int speed = 50;
+int speed = 500;
 int input = 0;
 int code;
 int main() 
@@ -29,6 +29,7 @@ int game()
 	{
 	case 5:
 		speed = 400;
+		cout << "Speed increased!";
 		break;
 	case 10:
 		speed = 350;
@@ -56,10 +57,7 @@ int game()
 	}
 	while(loop == true)
 	{
-		for (int i = 0; i < 200; i++)
-		{ 
 		output[level-1] = (rand() % 4 + 1);
-		}
 		for (int i = 0; i < level; i++)
 		{
 			switch (output[i]) //outputting numbers
