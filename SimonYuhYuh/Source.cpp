@@ -1,6 +1,7 @@
 #include <Windows.h>
 #include <string>
 #include <iostream>
+#include<time.h> 
 #pragma comment(lib, "winmm.lib")
 using namespace::std;
 int game();
@@ -28,8 +29,16 @@ int main()
 			break;
 		case 2:
 			system("CLS");
-			cout << "Hello there. My name is Simon, and you are playing my game.";
 			mciSendString("play sounds/simoninstructions.mp3", NULL, 0, NULL);
+			cout << "Hello there. My name is Simon, and you are playing my game.";
+			Sleep(6000);
+			system("CLS");
+			cout << "The goal of my game is to remember as many numbers as you can.";
+			Sleep(5000);
+			system("CLS");
+			cout << "You could say that it is a simple game of Simon Says.";
+			Sleep(4000);
+			cout << " You would be mistaken.";
 			break;
 		}
 	} while (loop == true);
@@ -96,6 +105,7 @@ int game()
 		default:
 			break;
 		} //speed increase
+		srand(time(0));
 		output[level-1] = (rand() % 4 + 1);
 		//outputting numbers
 		for (int i = 0; i < level; i++)
@@ -148,8 +158,8 @@ int game()
 			else
 			{
 				cout << "Game over!";
-				Beep(100, 250);
-				Beep(75, 1000);
+				Beep(250, 250);
+				Beep(200, 1000);
 				system("CLS");
 				exit(0);
 			}
