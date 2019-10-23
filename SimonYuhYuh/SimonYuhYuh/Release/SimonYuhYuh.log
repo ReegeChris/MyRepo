@@ -1,8 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (Release\) contains files shared from another project (SimonYuhYuh.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  Source.cpp
-C:\Users\RyuHo\source\repos\SimonYuhYuh\SimonYuhYuh\Source.cpp(108,13): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 13 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  SimonYuhYuh.vcxproj -> C:\Users\RyuHo\source\repos\SimonYuhYuh\Release\SimonBrainGame.exe

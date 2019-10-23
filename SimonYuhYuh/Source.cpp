@@ -14,12 +14,28 @@ int code;
 int main() 
 {
 	//Used to print title
+	cout << "         ____  _\n";
+	cout << "        / __ \\(_) _________\n";
+	cout << "       / /_/ / / ____/ ___/\n";
+	cout << "      /____ /  (__  |__  )\n";
+	cout << "     /_/ __///____/ ____/\n";
+	cout << "        / __ \\____  ____  _____\n";
+	cout << "       / /_/ / __ \\/ __ \\/  __/\n";
+	cout << "      / ____/ /_/ / /_/ / /\n";
+	cout << "     /_/ ___\\____/\\____/_/     __           __  _\n";
+	cout << "        / __ \\_________   ____/ /_  _______/ /_(_)___  ____  _____\n";
+	cout << "       / /_/ / ___ / __\\/  __  / / / / ___/ __/ / __ \\/ __ \\/ ___/\n";
+	cout << "      / ____/ /   / /_//  /_/ / /_/ / /__/ /_/ / /_/ / / / (__  )\n";
+	cout << "     /_/   /_/    \\___/\\__,__/\\__,_/\\___/\\__/_/\\____/_/ /_/____/\n";
+	cout << "\t\t\t\t\t\t\t\t     Presents...";
+	Sleep(4000);
+	system("CLS");
 	cout << "   __________  _______  _  __\n  / __/  _/  |/  / __ \\/ |/ /\n _\\ \\_/ // /|_/ / /_/ /    / \n/___/___/_/  /_/\\____/_/|_/  \n  Watch, Remember, Repeat! \n" << endl;
 	mciSendString("play sounds/iamsimon.mp3 wait", NULL, 0, NULL);
 	system("CLS");
 	do
 	{
-		cout << "1 - Start Game\n2 - How to Play\n3 - Exit";
+		cout << "1 - Start Game\n2 - How to Play\n3 - Exit" << endl;
 		cin >> input;
 		switch (input)
 		{
@@ -39,6 +55,14 @@ int main()
 			cout << "You could say that it is a simple game of Simon Says.";
 			Sleep(4000);
 			cout << " You would be mistaken.";
+			break;
+		case 3:
+			mciSendString("play sounds/goodbye.mp3 wait", NULL, 0, NULL);
+			exit(0);
+		default:
+			cout << "Invalid input. Please try again." << endl;
+			Sleep(1000);
+			system("CLS");
 			break;
 		}
 	} while (loop == true);
